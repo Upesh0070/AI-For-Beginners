@@ -182,6 +182,10 @@ You can run this documentation offline by using [Docsify](https://docsify.js.org
 
 Would you like to contribute a translation? Please read our [translation guidelines](etc/TRANSLATIONS.md).
 
+## Related Platforms
+
+Curious about how this curriculum compares to other learning sites? See our overview of [related online platforms](etc/related-platforms.md) to learn how "AI-For-Beginners" fits into the wider educational landscape.
+
 ## Other Curricula
 
 Our team produces other curricula! Check out:
