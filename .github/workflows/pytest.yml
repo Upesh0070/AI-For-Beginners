@@ -1,0 +1,19 @@
+name: Notebook Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install nbval
+      - name: Run notebook tests
+        run: pytest --nbval examples

@@ -18,6 +18,26 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Node dependencies
+        run: |
+          cd etc/quiz-app
+          npm install
+      - name: Run Jest tests
+        run: |
+          cd etc/quiz-app
+          npm test
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: pip install nbval
+      - name: Run notebook tests
+        run: pytest --nbval examples
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
